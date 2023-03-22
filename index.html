@@ -2,22 +2,31 @@
 
 <html lang="es">
 	<head>
-		<title> Mood Movies </title>
+		<link rel="stylesheet" type="text/css" href="indexcss.css">
+		<title> Cines Subbética </title>
 	</head>
 		<meta charset="utf8">
 
 	<body>
 		<header>
-			<p>Cines Subbética</p>
-			<img src = "logo.png" alt = "ERROR"  width="200" height="200">
+			
+			<img class="encabezado" src = "imagenes/logo.png" alt = "ERROR"  width="200" height="200">
 
-			<h1> Cines Subbética</h1>
+			<h1 class="encabezado"> Cines Subbética</h1>
 
-			<p> formulario<p>
+			<form class="encabezado login" method="post"> 
+				<label for="nombre">Usuario:</label>
+	  			<input type="text" id="nombre" name="nombre" required> <br>
 
-			<nav>
+	  			<label for="nombre">Contraseña:</label>
+	  			<input type="text" id="nombre" name="nombre" required> <br>
+
+
+			</form>
+
+			<nav id="menu">
 				<ul>
-					<li><a href=inicio.html>inicio</a></li>
+					<li><a href=inicio.html>Inicio</a></li>
 					<li><a href=#progweb>Estrenos</a></li>
 					<li><a href=#mypro>Cartelera</a></li>
 					<li><a href=#mypro>Horarios</a></li>
@@ -39,31 +48,37 @@
 				</ul>
 			</aside>
 
-			<section>
+			<section class="moviesDisplay">
 				<h5>Estrenos de la semana</h5>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/creed3.jpg" alt = "ERROR"  width="265" height="377.5">
+					
 				</article>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/elextrano.jpg" alt = "ERROR"  width="265" height="377.5">
 				</article>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/iberia.jpg" alt = "ERROR"  width="265" height="377.5">
+					
 				</article>
+
 				<a href=#mypro>Ver todas las películas</a>
 			</section>
 
-			<section>
+			<section class="moviesDisplay">
 				<h5>Cartelera</h5>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/65.jpg" alt = "ERROR"  width="265" height="377.5">
+					
 				</article>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/elhoteldeloslios.jpg" alt = "ERROR"  width="265" height="377.5">
 				</article>
 				<article>
-					<p>Aquí hay una película</p>
+					<img class="moviesDisplay" src = "imagenes/scream6.jpg" alt = "ERROR"  width="265" height="377.5">
+					
 				</article>
+				<br>
 				<a href=#mypro>Ver todas las películas</a>
 			</section>
 		</main>
