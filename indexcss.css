@@ -32,7 +32,6 @@ body {
 
 .encabezado form{
     align-basis: 25%;
-    
 }
 
 .encabezado form label{
@@ -49,15 +48,13 @@ body {
 	display: block;
 	width: 50%;
 	height: 20%;
-    
 }
 
 
 /* Menú */
-#menu{
+.encabezado nav{
 	background-color: black;
-	
-
+	padding-left: 33%;
 }
 
 #menu ul{
