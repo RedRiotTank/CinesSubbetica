@@ -1,6 +1,63 @@
 
+/*Color de fondo del body*/
+
+body {
+	background-color: whitesmoke;
+}
+
+/* El encabezado */
+
+.encabezado {
+	
+	align-content: center;
+}
+
+.encabezado section{
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 0.7%;
+}
+.encabezado img{
+	padding-left: 5%;
+	flex-basis: ;
+	
+}
+.encabezado h1{
+	flex-basis: 50%;
+	padding-left: 30%;
+	padding-top: 2%;
+	font-size: 250%;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.encabezado form{
+    align-basis: 25%;
+    
+}
+
+.encabezado form label{
+	font-size: 150%;
+}
+
+.encabezado form input{
+	margin-bottom: 4%;
+	padding-bottom: 5%;
+}
+
+  
+.encabezado form button{
+	display: block;
+	width: 50%;
+	height: 20%;
+    
+}
+
+
+/* Menú */
 #menu{
 	background-color: black;
+	
+
 }
 
 #menu ul{
@@ -26,42 +83,6 @@
 	background-color: seagreen;
 }
 
-body {
-	background-color: whitesmoke;
-}
-
-.encabezado{
-	display: inline-block;
-	vertical-align: middle;
-	font-family: 'Courier New', monospace;
-	
-}
-
-.encabezado img{
-	text-align: left;
-}
-
-.encabezado h1{
-	text-align: center;
-	
-
-}
-
-.login{
-	text-align: right;
-}
-
-.encabezado.login label, 
-.encabezado.login input {
-	display: block;
-}
-
-.encabezado.login label {
-	text-align: left;
-	margin: 5px;
-	margin-bottom: 5px; 
-}
-
 .moviesDisplay h5{
 	text-align: center;
 
@@ -74,10 +95,15 @@ body {
 
 }
 
-aside {
 
+/*aside del body*/
+
+aside {
+	display: grid;
 	float: left;
 	width: 25%;
 	margin-right: 2%;
 	height: 100vh;
+	align-self: stretch;
+
 }
