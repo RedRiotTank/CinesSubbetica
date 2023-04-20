@@ -1,0 +1,30 @@
+#alta {
+  flex-basis: 70%;  /*Asignación del 70% del espacio total (distribución 30-70 del asi y el contenido general)*/
+  display: flex;    /*sección con distribucción flexible.*/
+  justify-content: center;  /*jjustificado de contenido.*/
+  align-items: center;      /*Alineación de items*/
+  height: 100%;             /*máxima altura, ajuste de ancho automático.*/
+  padding-top: 10%;         /*padding superior*/
+}
+
+.mensaje {
+  background-color: #f2f2f2;  /*Color de fondo*/
+  border-radius: 10px;        /*Redondeado de esquinas*/
+  box-shadow: 0px 0px 10px #888888; /*Sombreado*/
+  padding: 5%;  /*Ajuste del espacio de la caja.*/
+  text-align: center; /*texto centrado*/
+  color: black; /*color del texto*/
+  font-size: 1.2em; /*tamaño de fuente*/
+  width: 80%;   /*Ancho que ocupa*/
+
+}
+
+.mensaje p:first-of-type {    /*first of type: para la primera etiqueta <p> que encuentre*/
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.mensaje p:last-of-type { /*last of type: para la última etiqueta <p> que encuentre*/
+  margin-bottom: 0;
+}
