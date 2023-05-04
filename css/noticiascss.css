@@ -1,0 +1,35 @@
+.noticia{
+	flex-basis: 70%;	/*Asignación del 70% del espacio total (distribución 30-70 del asi y el contenido general)*/
+}
+
+.title {
+	text-align: center;	/*Alineado de texto*/
+	margin: 2% 20%;		/*Margenes alto-ancho*/
+}
+
+.paragraph{
+	font-family: "Times New Roman", Times, serif;	/*tipo de letra*/
+	font-size: 130%;	/*Aumento de tamalo de fuente de letra*/
+	margin: 3% 20%;		/*Margenes alto-ancho*/
+}
+
+.imgnoticia{
+	text-align: center;	/*Alineamiento de la imagen de la noticia.*/
+}
+
+.enlaces{	
+	margin-bottom: 2%;	/*Margen inferior*/
+	font-family: "Times New Roman", Times, serif;	/*tipo de letra*/
+	font-size: 120%;	/*Aumento de tamalo de fuente de letra*/
+}
+
+.enlaceAnterior{
+	padding-left: 25%;	/*Padding a la izquierda*/
+}
+													/*Colocación de las flechas en general*/
+.enlaceSiguiente{
+	padding-left: 44%;	/*Padding a la izquierda*/
+}	
+
+
+
