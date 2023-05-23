@@ -13,7 +13,7 @@
 	#encabezado h1{
 		text-align: center;	/*Título en el centro horizontalmente*/
 		font-size: 250%;		/*Aumento del tamaño de fuente.*/
-		padding-top: 10%	/*Padding superior para bajar el título*/
+		padding-top: 10%;	/*Padding superior para bajar el título*/
 	}
 
 	#encabezado form {
@@ -24,6 +24,24 @@
 	  align-items: center;	/*Alineamos todos los items al centro, como no es técnicamente
 	  											texto, se alinean correctamente.*/
 	}
+
+
+	#encabezado section {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#encabezado section img {
+		border-radius: 100%;
+		margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+	}
+
+	#encabezado section article {
+		display: flex;
+		flex-direction: column;
+	}
+
 
 	#encabezado form input {
 	  width: 90%;		/*Reducimos un poco el tamaño del ancho del campo de entrada.*/
