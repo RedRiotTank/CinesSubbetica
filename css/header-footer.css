@@ -16,16 +16,6 @@
 		padding-top: 10%;	/*Padding superior para bajar el título*/
 	}
 
-	#encabezado form {
-		width: 100%;			/*Forzar oque ocupe su 100% a lo ancho (de su espacio).*/
-	  margin: 0px 0px;	/*Eliminar margenes.*/
-	  display: flex;		/*Distribución flexible para ponerlo en formato vertical.*/
-	  flex-direction: column;	/*Lo especificamos en vertical.*/ 
-	  align-items: center;	/*Alineamos todos los items al centro, como no es técnicamente
-	  											texto, se alinean correctamente.*/
-	}
-
-
 	#encabezado section {
 		display: flex;
 		flex-direction: row;
@@ -42,25 +32,70 @@
 		flex-direction: column;
 	}
 
+	#encabezado form {
+		width: 100%;
+		margin: 0px 0px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#encabezado form .form-group {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	#encabezado form .form-group button {
+		margin-right: 10px;
+	}
+
+	#encabezado form .form-group p {
+		margin: 0;
+		color: red;
+	}
 
 	#encabezado form input {
-	  width: 90%;		/*Reducimos un poco el tamaño del ancho del campo de entrada.*/
-	  height: 3vh;	/*Ampliamos un poco en función de la pantalla el tamaño vertical de
-	  								entrada forzando también un leve aumento del del encabezado*/
-	  margin: 0.5rem;	/*Ajustamos margenes del botón en función del tamaño de letra heredado.*/
+		width: 90%;
+		height: 3vh;
+		margin: 0.5rem;
 	}
 
 	#encabezado form button {
-	  padding: 0.5em 1em;
-	  border: none;					/*eliminamos b*/
-	  background: green;	/*Color del botón*/
-	  cursor: pointer;	/*Manita cuando el usuario tenga el ratón sobre el botón.*/
-	  border-radius: 10px;	/*redondear esquinas del botón.*/
+		padding: 0.5em 1em;
+		border: none;
+		background: green;
+		cursor: pointer;
+		border-radius: 10px;
 	}
 
 	#encabezado form button:hover {
-	  background-color: forestgreen;  /*iluminar botón al poner el cursor encima*/
+		background-color: forestgreen;
 	}
+
+	#encabezado form .form-group p.error-message::after,
+	#encabezado form .form-group p.info-message::after {
+		content: attr(title);
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 0.5em;
+		background-color: black;
+		color: white;
+		font-size: 0.8em;
+		border-radius: 5px;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease;
+	}
+
+	#encabezado form .form-group p.error-message:hover::after,
+	#encabezado form .form-group p.info-message:hover::after {
+		opacity: 1;
+	}
+
+
 }
 
 @media only screen and (max-width: 1081px) {

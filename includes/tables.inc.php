@@ -4,7 +4,7 @@
     			if ($displaymode === 'horarios') {
     				include('includes/horarios.inc.php');
     			} else {
-    				include('includes/tarifas.inc.php');
+    				include('includes/tables/tarifas.inc.php');
     			}
     		?>
 

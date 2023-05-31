@@ -19,6 +19,6 @@
         echo "<h4>Usuario</h4>";
        }?>
 
-      <a href="index.php?logout=true">Cerrar sesión</a>
+      <a href="includes/session/logout.php">Cerrar sesión</a>
     </article>
 </section>

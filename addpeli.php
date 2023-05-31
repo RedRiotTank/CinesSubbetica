@@ -19,26 +19,26 @@
 
 		<main>
 			<?php
-			include('includes/aside.inc.php');
+                include('includes/aside.inc.php');
 
-			require_once 'database.php';
-            $db = new Database();
+                require_once 'database.php';
+                $db = new Database();
 
-            // Conectar a la base de datos
-            $db->connect();
+                // Conectar a la base de datos
+                $db->connect();
 
-            // comprobar datos
-            if(isset($_SESSION['username'])){
-                $isadmin = $db->getAdmin($_SESSION['username']);
-            }else{
-                $isadmin = false;
-            }
+                // comprobar datos
+                if(isset($_SESSION['username'])){
+                    $isadmin = $db->getAdmin($_SESSION['username']);
+                }else{
+                    $isadmin = false;
+                }
 
-            if($isadmin){
-                include('includes/addpeli.inc.php');
-            } else {
-                echo 'Usted no es administrador y no tiene acceso a esta página, si piensa que es un error, contacte con el administrador';
-            }
+                if($isadmin){
+                    include('includes/addpeli.inc.php');
+                } else {
+                    echo 'Usted no es administrador y no tiene acceso a esta página, si piensa que es un error, contacte con el administrador';
+                }
 
 			?>
 

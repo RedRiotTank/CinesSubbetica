@@ -4,16 +4,15 @@
 	<h1>CINES<br>SUBBÉTICA</h1>
 
     <?php
-            $vidaUtil = 7 * 24 * 60 * 60; // 7 días en segundos
-          session_set_cookie_params($vidaUtil);
-          session_start();
+        $vidaUtil = 7 * 24 * 60 * 60; // 7 días en segundos
+        session_set_cookie_params($vidaUtil);
+        session_start();
 
     if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true){
         include('includes/session/yessession.inc.php');
 
     } else {
         include('includes/session/nosession.inc.php');
-
     }
     ?>
 

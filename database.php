@@ -98,7 +98,6 @@ class Database {
         // Consultar la base de datos para verificar la autenticación
         $sql = "SELECT pass FROM usuarios WHERE correo = '$email'";
         $result = $this->conn->query($sql);
-        $result;
 
         if ($result->rowCount() == 1) {
             $row = $result->fetch(PDO::FETCH_ASSOC);
@@ -107,8 +106,7 @@ class Database {
             // Verificar la contraseña ingresada con la contraseña almacenada (cifrada)
             if (password_verify($password, $hashedPassword)) {
                 // Autenticación exitosa
-                $_SESSION['loggedin'] = true;
-                $_SESSION['username'] = $email; // Asignar el correo electrónico como nombre de usuario
+
                 $result = true;
                 echo "¡Inicio de sesión exitoso! Bienvenido, " . $_SESSION['username'];
             } else {
