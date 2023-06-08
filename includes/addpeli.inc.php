@@ -42,8 +42,10 @@
         <input type="checkbox" id="estreno" name="estreno">
 
         <button type="submit">Añadir Película</button>
+
+        <div id="validationErrors"></div>
     </form>
-    <div id="validationErrors"></div>
+
 </section>
 
 

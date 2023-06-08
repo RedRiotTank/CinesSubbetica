@@ -25,7 +25,7 @@ main .register {
   margin-top: 3%;
 }
 
-.register input { 
+.register input {
   width: 100%;  /*anchura de la entrada*/
   padding: 2.5%;  /*padding de la caja de entrada de parámetros*/
 
@@ -34,6 +34,12 @@ main .register {
   margin-bottom: 4%;  /*Separación entre campos*/
 }
 
+
+.error {
+  color: red; /*color de error*/
+  font-size: 90%; /*tamaño de letra de error*/
+  margin-bottom: 2%; /*margen inferior*/
+}
 .register fieldset{
   margin-bottom: 3%;  /*margen inferior*/
   margin-top: 5%;     /*margen superior*/
@@ -43,7 +49,7 @@ main .register {
   display: inline-block;  /*Display en linea para que salga input- value*/
   float: left;            /*apilado de izq a dcha*/
   width: 30%;           /*30% del ancho*/
-} 
+}
 
 .register fieldset label{
   display: inline-block;  /*Display en linea para que salga input- value*/
@@ -71,3 +77,36 @@ main .register {
 .register button:hover {
   background-color: forestgreen;  /*iluminar botón al poner el cursor encima*/
 }
+
+/* Estilo para ocultar el círculo del radiobutton */
+.profile-images input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para el borde rojo al pasar el ratón */
+.profile-images .profile-image:hover img {
+  border: 2px solid red;
+}
+
+/* Estilo para el borde verde cuando está seleccionado */
+.profile-images .profile-image input[type="radio"]:checked + img {
+  border: 2px solid lightgreen;
+}
+
+/* Estilo para redondear los bordes de las imágenes */
+.profile-images .profile-image img {
+  border-radius: 4px;
+}
+
+/* Estilo para eliminar la línea entre las imágenes */
+.profile-images .profile-image {
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 0;
+}
+

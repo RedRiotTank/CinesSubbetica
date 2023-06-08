@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/asidescss/aside.css">
 		<link rel="stylesheet" type="text/css" href="css/asidescss/altausuarioaside.css">
 		<link rel="stylesheet" type="text/css" href="css/formcss.css">
+        <script type= "text/javascript" src="./scripts/check_addpeli.js"></script>
 		<title> Cinessss Subbética </title>
 	</head>
 

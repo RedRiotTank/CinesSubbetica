@@ -17,15 +17,12 @@
     $db->connect();
 
     // Insertar los datos del formulario en la base de datos
+
     if ($db->insertComment($_SESSION['username'], $id, $comment, $stars)) {
+
         header("Location: ../peli.php?id=$id");
         exit();
     } else {
         echo "Error al insertar datos. Póngase en contacto con el administrador por favor.";
     }
-
-
-
-
-
  ?>

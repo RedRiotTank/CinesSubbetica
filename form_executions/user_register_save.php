@@ -21,11 +21,16 @@
     // Conectar a la base de datos
     $db->connect();
 
-    // Insertar los datos del formulario en la base de datos
-    if ($db->insertUserData($nombre, $apellido, $genero, $fecha_nacimiento, $generosSeleccionados, $correo_electronico, $contrasena)) {
-        header("Location: ../alta.php");
-        exit();
+
+    if ($db->checkEmailExists($correo_electronico)) {
+        header("Location: ../altausuarios.php?usedEmail=true");
     } else {
-        echo "Error al insertar datos. Póngase en contacto con el administrador por favor.";
+        // Insertar los datos del formulario en la base de datos
+        if ($db->insertUserData($nombre, $apellido, $genero, $fecha_nacimiento, $generosSeleccionados, $correo_electronico, $contrasena)) {
+            header("Location: ../alta.php");
+            exit();
+        } else {
+            echo "Error al insertar datos. Póngase en contacto con el administrador por favor.";
+        }
     }
 ?>

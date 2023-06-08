@@ -8,6 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/asidescss/aside.css">
 		<link rel="stylesheet" type="text/css" href="css/asidescss/peliaside.css">
 		<link rel="stylesheet" type="text/css" href="css/pelicss.css">
+        <script type= "text/javascript" src="./scripts/check_comment.js"></script>
 		<title> Cinessss Subbética </title>
 	</head>
 
@@ -72,6 +73,94 @@
                     <img src = "imagenes/3img-<?php echo $id; ?>.jpg" alt = "ERROR" width="350" onerror="this.onerror=null; this.src='./imagenes/errorimg.jpg'"height="250"/>
                     <img src = "imagenes/4img-<?php echo $id; ?>.jpg" alt = "ERROR" onerror="this.onerror=null; this.src='./imagenes/errorimg.jpg'" width="350" height="250"/>
                 </section>
+
+
+                <h2 class="comentariostitulo">SECCIÓN DE COMENTARIOS</h2>
+
+                <ul class="comentarios">
+                    <?php
+                    require_once 'database.php';
+                    // Crear una instancia de la clase Database
+                    $db = new Database();
+
+                    // Conectar a la base de datos
+                    $db->connect();
+
+                    $comentarios = $db->getComments($id);
+
+                    if (!empty($comentarios)){
+                        foreach ($comentarios as $comentario) {
+                            $correo = $comentario['correo'];
+                            $pfp = $db->getPFPNumber($correo);
+                            $valoracion = $comentario['valoracion'];
+                            $maximo_estrellas = 5;
+                            $comentario_texto = $comentario['comentario'];
+
+
+
+
+
+                            echo '<li>';
+
+                            echo '<img src="imagenes/fotoperfil' . $pfp . '.jpg" alt="Foto de perfil de Juan" width="80" height="80">';
+                            echo '<article>';
+                            echo '<h3>' . $correo . '</h3>';
+                            echo '<p>';
+
+                            for ($i = 1; $i <= $maximo_estrellas; $i++) {
+                                if ($i <= $valoracion) {
+                                    echo '<i class="material-icons">star</i>';
+                                } else {
+                                    echo '<i class="material-icons">star_border</i>';
+                                }
+                            }
+
+                            echo '</p>';
+                            echo '<p>' . $comentario_texto . '</p>';
+
+
+                            echo '</article>';
+                            echo '</li>';
+                        }
+                    }
+                    ?>
+                </ul>
+
+
+                <?php
+                    if(isset($_SESSION['loggedin'])){
+                        ?>
+                        <form class="ponercomentario" method="post" action="form_executions/movie_comment_save.php">
+                            <input type="hidden" name="id" value="<?php echo $id; ?>">
+
+                            <label for="stars">¿Cuántas estrellas le das?</label>
+                            <input type="range" id="stars" name="stars" min="1" max="5" step="1" class="input-field">
+                            <div class="estrellas">
+                                <span>1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>5</span>
+                            </div>
+
+                            <label for="comment">Da tu opinión:</label>
+                            <textarea id="comment" name="comment" rows="5" class="input-field"></textarea>
+
+                            <input type="submit" value="Enviar" class="submit-button">
+                            <div class="error"> </div>
+                        </form>
+                        <?php
+                    }
+
+
+                    else
+                        echo '<h2 class="comentariostitulo">INICIA SESIÓN PARA DEJAR TU COMENTARIO</h2>';
+
+                ?>
+
+
+
+
             </section>
 		</main>
 

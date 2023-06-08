@@ -22,6 +22,7 @@ $db = new Database();
 // Conectar a la base de datos
 $db->connect();
 
+
 // Insertar los datos del formulario en la base de datos
 if ($db->insertMovieData($nombre, $anio, $director, $interpretes, $tematicas, $valoracion, $sinopsis, $estreno, $trailer)) {
     echo 'in';

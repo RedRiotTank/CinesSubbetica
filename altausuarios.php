@@ -8,8 +8,8 @@
 		<link rel="stylesheet" type="text/css" href="css/asidescss/aside.css">
 		<link rel="stylesheet" type="text/css" href="css/asidescss/altausuarioaside.css">
 		<link rel="stylesheet" type="text/css" href="css/formcss.css">
-		
-				
+        <script type= "text/javascript" src="./scripts/check_altausuario.js"></script>
+
 
 		<title> Cines Subbética </title>
 	</head>
@@ -25,15 +25,16 @@
 
             <section class="register">
                 <h1>Registro de Usuario</h1>
-                <form method="post" action="form_executions/user_register_save.php">
+                <form id= "registration-form" method="post" action="form_executions/user_register_save.php">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" >
 
                     <label for="apellido">Apellido:</label>
-                    <input type="text" id="apellido" name="apellido" required>
+                    <input type="text" id="apellido" name="apellido" >
+
 
                     <label for="genero">Género:</label>
-                    <select id="genero" name="genero" required>
+                    <select id="genero" name="genero" >
                         <option value="hombre">Hombre</option>
                         <option value="mujer">Mujer</option>
                         <option value="otro">Otro</option>
@@ -42,7 +43,7 @@
                         <legend>Fecha de nacimiento</legend>
                         <article>
                             <label for="fecha_nacimiento">Ingrese su fecha de nacimiento:</label>
-                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" >
                         </article>
                     </fieldset>
 
@@ -68,18 +69,32 @@
                     </fieldset>
 
                     <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" >
 
                     <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" >
 
                     <label for="confirm_password">Confirmar Contraseña:</label>
-                    <input type="password" id="confirm_password" name="confirm_password" required>
+                    <input type="password" id="confirm_password" name="confirm_password" >
 
                     <button type="submit">Registrarse</button>
+
+                    <div id="error-container">
+                        <?php
+                        if (isset($_GET['usedEmail'])) {
+                            $usedEmail = $_GET['usedEmail'];
+                            if ($usedEmail) {
+                                echo "⚠ El correo electrónico ya está en uso.";
+                            }
+                        }
+                        ?>
+                    </div>
+
                 </form>
 
             </section>
+
+            <div id="prueba"></div>
 
 		</main>
 

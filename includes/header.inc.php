@@ -24,7 +24,6 @@
 
 		<li><a href="display.php?displaymode=estrenos">Estrenos</a></li>
 		<li><a href="display.php?displaymode=cartelera">Cartelera</a></li>
-		<li><a href="tables.php?tablemode=horarios">Horarios</a></li>
 		<li><a href="tables.php?tablemode=tarifas">Tarifas</a></li>
 		<li><a href=informacion.php>Información</a></li>
 	</ul>
